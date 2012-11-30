@@ -2,10 +2,12 @@ require 'sinatra'
 require 'json'
 
 get '/all' do
+  content_type :json, :charset => 'utf-8'
   { result: values }.to_json
 end
 
 get '/random' do
+  content_type :json, :charset => 'utf-8'
   { result: values.sample }.to_json
 end
 
